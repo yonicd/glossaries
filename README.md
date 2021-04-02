@@ -14,3 +14,4 @@ remotes::install_github("yonicd/glossaries")
 
 ## Example
 
+See [Vignette](https://yonicd.github.io/glossaries/articles/usage.html) for basic usage.
