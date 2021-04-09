@@ -1,0 +1,39 @@
+destination: docs
+
+title: glossaries
+
+development:
+  mode: auto
+
+navbar:
+  structure:
+    left:  [home, reference, articleindex, news]
+    right: [github, twitter]
+  components:
+    articles: ~
+    articleindex:
+      text: Articles
+      href: articles/index.html
+    twitter:
+      icon: fa-lg fa-twitter
+      href: http://twitter.com/yoniceedee
+
+reference:
+  - title: 'Inline Actions'
+    contents:
+      - has_concept("inline")
+  - title: 'Interacting with the Glossary'
+    contents:
+      - has_concept("verbs")
+      - has_concept("query")
+  - title: 'Importing/Exporting Glossary'
+    contents:
+      - has_concept("io")
+  - title: 'Utilities'
+    contents:
+      - has_concept("utils")
+
+articles:
+  - title: "Basic Usage"
+    contents:
+      - usage

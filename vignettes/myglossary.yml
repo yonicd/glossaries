@@ -1,0 +1,8 @@
+definitions:
+- entry: ocean
+  name: ocean
+  description: oceans are wet from a standpoint of water
+acronyms:
+- entry: po
+  label: PO
+  long: Pacific Ocean

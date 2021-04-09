@@ -1,11 +1,13 @@
 g <- glossary$new()
 
-#' @title FUNCTION_TITLE
-#' @description FUNCTION_DESCRIPTION
-#' @param file PARAM_DESCRIPTION, Default: ''
-#' @param ... PARAM_DESCRIPTION
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
+#' @title Input/Output
+#' @description Utility functions reading/exporting the glossary
+#' @param file character, path to file storing glossary terms. Default: ''
+#' @param ... additional arguments passed to [read_yaml][yaml::read_yaml]
+#' @return glossary
+#' @details
+#' new_glossary returns a new glossary object that is separate from
+#' the internal glossary object.
 #' @examples
 #' \dontrun{
 #' if(interactive()){
@@ -13,6 +15,7 @@ g <- glossary$new()
 #'  }
 #' }
 #' @rdname glossary_utils
+#' @family io
 #' @export
 
 load_entries <- function(file = "", ...){
@@ -21,7 +24,7 @@ load_entries <- function(file = "", ...){
 
 #' @rdname glossary_utils
 #' @export
-use_glossary <- function(file = '', ...){
+new_glossary <- function(file = '', ...){
   glossary$new(file, ...)
 }
 
@@ -36,11 +39,10 @@ table_prep <- function(e){
 }
 
 
-#' @title FUNCTION_TITLE
-#' @description FUNCTION_DESCRIPTION
-#' @param entries PARAM_DESCRIPTION, Default: get_entries()
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
+#' @title Export glossary to  table format
+#' @description Convert the internal glossary object to a data.frame
+#' @param entries character, entries to export, Default: get_entries()
+#' @return data.frame
 #' @examples
 #' \dontrun{
 #' if(interactive()){
@@ -48,6 +50,7 @@ table_prep <- function(e){
 #'  }
 #' }
 #' @rdname glossary_to_table
+#' @family io
 #' @export
 glossary_to_table <- function(entries = get_entries()){
   ret <- do.call(rbind,lapply(entries,table_prep))

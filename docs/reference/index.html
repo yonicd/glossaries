@@ -82,21 +82,17 @@
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="../articles/usage.html">Basic Usage</a>
-    </li>
-  </ul>
+<li>
+  <a href="../articles/index.html">Articles</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="http://twitter.com/yoniceedee">
+    <span class="fas fa-lg fa-twitter"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -124,7 +120,7 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
+          <h2 id="section-inline-actions" class="hasAnchor"><a href="#section-inline-actions" class="anchor"></a>Inline Actions</h2>
           <p class="section-desc"></p>
         </th>
       </tr>
@@ -133,49 +129,67 @@
         <td>
           <p><code><a href="acr_verbs.html">acrshort()</a></code> <code><a href="acr_verbs.html">acrfull()</a></code> <code><a href="acr_verbs.html">acrlong()</a></code> </p>
         </td>
-        <td><p>FUNCTION_TITLE</p></td>
+        <td><p>Inline Acronym Verbs</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="add_acronym.html">add_acronym()</a></code> </p>
+          <p><code><a href="gls_verbs.html">gls()</a></code> <code><a href="gls_verbs.html">glspl()</a></code> <code><a href="gls_verbs.html">Gls()</a></code> <code><a href="gls_verbs.html">Glspl()</a></code> </p>
         </td>
-        <td><p>FUNCTION_TITLE</p></td>
+        <td><p>Inline Verbs</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-interacting-with-the-glossary" class="hasAnchor"><a href="#section-interacting-with-the-glossary" class="anchor"></a>Interacting with the Glossary</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="verbs.html">add_definition()</a></code> <code><a href="verbs.html">add_acronym()</a></code> <code><a href="verbs.html">update_entry()</a></code> <code><a href="verbs.html">remove_entry()</a></code> </p>
+        </td>
+        <td><p>Glossary actions</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="add_definition.html">add_definition()</a></code> </p>
+          <p><code><a href="query.html">get_entries()</a></code> <code><a href="query.html">get_entry()</a></code> <code><a href="query.html">entry_names()</a></code> </p>
         </td>
-        <td><p>FUNCTION_TITLE</p></td>
-      </tr><tr>
+        <td><p>Query Glossary</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-importing-exporting-glossary" class="hasAnchor"><a href="#section-importing-exporting-glossary" class="anchor"></a>Importing/Exporting Glossary</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
         
         <td>
           <p><code><a href="glossary_to_table.html">glossary_to_table()</a></code> </p>
         </td>
-        <td><p>FUNCTION_TITLE</p></td>
+        <td><p>Export glossary to  table format</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="glossary_utils.html">load_entries()</a></code> <code><a href="glossary_utils.html">use_glossary()</a></code> <code><a href="glossary_utils.html">glossary_to_yaml()</a></code> </p>
+          <p><code><a href="glossary_utils.html">load_entries()</a></code> <code><a href="glossary_utils.html">new_glossary()</a></code> <code><a href="glossary_utils.html">export_glossary()</a></code> </p>
         </td>
-        <td><p>FUNCTION_TITLE</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gls_verbs.html">gls()</a></code> <code><a href="gls_verbs.html">Gls()</a></code> <code><a href="gls_verbs.html">glspl()</a></code> <code><a href="gls_verbs.html">Glspl()</a></code> </p>
-        </td>
-        <td><p>FUNCTION_TITLE</p></td>
-      </tr><tr>
+        <td><p>Input/Output</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-utilities" class="hasAnchor"><a href="#section-utilities" class="anchor"></a>Utilities</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
         
         <td>
           <p><code><a href="pipe.html">%>%</a></code> </p>
         </td>
         <td><p>re-export magrittr pipe operators</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="verbs.html">get_entry()</a></code> <code><a href="verbs.html">remove_entry()</a></code> <code><a href="verbs.html">update_entry()</a></code> <code><a href="verbs.html">get_entries()</a></code> <code><a href="verbs.html">entry_names()</a></code> </p>
-        </td>
-        <td><p>FUNCTION_TITLE</p></td>
       </tr>
     </tbody>
     </table>
@@ -184,7 +198,10 @@
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#section-inline-actions">Inline Actions</a></li>
+      <li><a href="#section-interacting-with-the-glossary">Interacting with the Glossary</a></li>
+      <li><a href="#section-importing-exporting-glossary">Importing/Exporting Glossary</a></li>
+      <li><a href="#section-utilities">Utilities</a></li>
     </ul>
   </div>
 </div>

@@ -1,6 +1,6 @@
 #' @rdname glossary_utils
 #'@export
-glossary_to_yaml <- function(file, ...){
+export_glossary <- function(file, ...){
   x <- get_entries()
   idx <- sapply(x,'[[',1)%in%'definition'
   names(x) <- NULL

@@ -4,7 +4,7 @@
 \alias{acrshort}
 \alias{acrfull}
 \alias{acrlong}
-\title{FUNCTION_TITLE}
+\title{Inline Acronym Verbs}
 \usage{
 acrshort(term)
 
@@ -13,13 +13,13 @@ acrfull(term)
 acrlong(term)
 }
 \arguments{
-\item{term}{PARAM_DESCRIPTION}
+\item{term}{character, name of the term.}
 }
 \value{
-OUTPUT_DESCRIPTION
+character
 }
 \description{
-FUNCTION_DESCRIPTION
+Verbs to invoke inline outputs for acronyms
 }
 \details{
 DETAILS
@@ -31,3 +31,8 @@ if(interactive()){
  }
 }
 }
+\seealso{
+Other inline: 
+\code{\link{gls}()}
+}
+\concept{inline}

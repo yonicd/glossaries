@@ -2,27 +2,28 @@
 % Please edit documentation in R/gls.R
 \name{gls}
 \alias{gls}
-\alias{Gls}
 \alias{glspl}
+\alias{Gls}
 \alias{Glspl}
-\title{FUNCTION_TITLE}
+\title{Inline Verbs}
 \usage{
 gls(term)
 
-Gls(term)
-
 glspl(term)
+
+Gls(term)
 
 Glspl(term)
 }
 \arguments{
-\item{term}{PARAM_DESCRIPTION}
+\item{term}{character, name of the term.}
 }
 \value{
-OUTPUT_DESCRIPTION
+character
 }
 \description{
-FUNCTION_DESCRIPTION
+Inline verbs to create
+glossary outputs from loaded glossary object.
 }
 \details{
 DETAILS
@@ -34,3 +35,8 @@ if(interactive()){
  }
 }
 }
+\seealso{
+Other inline: 
+\code{\link{acrshort}()}
+}
+\concept{inline}

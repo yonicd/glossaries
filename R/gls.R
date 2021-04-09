@@ -1,7 +1,8 @@
-#' @title FUNCTION_TITLE
-#' @description FUNCTION_DESCRIPTION
-#' @param term PARAM_DESCRIPTION
-#' @return OUTPUT_DESCRIPTION
+#' @title Inline Verbs
+#' @description Inline verbs to create
+#'   glossary outputs from loaded glossary object.
+#' @param term character, name of the term.
+#' @return character
 #' @details DETAILS
 #' @examples
 #' \dontrun{
@@ -10,6 +11,7 @@
 #'  }
 #' }
 #' @rdname gls_verbs
+#' @family inline
 #' @export
 gls <- function(term){
   g$gls(term)
@@ -17,14 +19,14 @@ gls <- function(term){
 
 #' @rdname gls_verbs
 #' @export
-Gls <- function(term){
-  g$Gls(term)
+glspl <- function(term){
+  g$glspl(term)
 }
 
 #' @rdname gls_verbs
 #' @export
-glspl <- function(term){
-  g$glspl(term)
+Gls <- function(term){
+  g$Gls(term)
 }
 
 #' @rdname gls_verbs

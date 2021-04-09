@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Export glossary to  table format — glossary_to_table • glossaries</title>
+<title>Query Glossary — get_entries • glossaries</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,8 @@
 
 
 
-<meta property="og:title" content="Export glossary to  table format — glossary_to_table" />
-<meta property="og:description" content="Convert the internal glossary object to a data.frame" />
+<meta property="og:title" content="Query Glossary — get_entries" />
+<meta property="og:description" content="Query glossary entries" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -108,33 +108,39 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Export glossary to  table format</h1>
+    <h1>Query Glossary</h1>
     
-    <div class="hidden name"><code>glossary_to_table.Rd</code></div>
+    <div class="hidden name"><code>query.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Convert the internal glossary object to a data.frame</p>
+    <p>Query glossary entries</p>
     </div>
 
-    <pre class="usage"><span class='fu'>glossary_to_table</span>(<span class='kw'>entries</span> <span class='kw'>=</span> <span class='fu'><a href='query.html'>get_entries</a></span>())</pre>
+    <pre class="usage"><span class='fu'>get_entries</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"definition"</span>, <span class='st'>"acronym"</span>))
+
+<span class='fu'>get_entry</span>(<span class='no'>entry</span>)
+
+<span class='fu'>entry_names</span>()</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>entries</th>
-      <td><p>character, entries to export, Default: get_entries()</p></td>
+      <th>type</th>
+      <td><p>character, term type 'definition' or 'acronym'</p></td>
+    </tr>
+    <tr>
+      <th>entry</th>
+      <td><p>character, entry name</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>data.frame</p>
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p>Other io: 
-<code><a href='glossary_utils.html'>load_entries</a>()</code></p></div>
+    <p><code>get_entry()</code> returns a list with contents of a single entry</p>
+<p><code>get_entries()</code> returns a list of entries by type</p>
+<p><code>entry_name()</code> returns a character vector of the stored entries</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
@@ -148,7 +154,6 @@
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
-      <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 

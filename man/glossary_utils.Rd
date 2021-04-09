@@ -2,29 +2,30 @@
 % Please edit documentation in R/glossary_utils.R, R/io.R
 \name{load_entries}
 \alias{load_entries}
-\alias{use_glossary}
-\alias{glossary_to_yaml}
-\title{FUNCTION_TITLE}
+\alias{new_glossary}
+\alias{export_glossary}
+\title{Input/Output}
 \usage{
 load_entries(file = "", ...)
 
-use_glossary(file = "", ...)
+new_glossary(file = "", ...)
 
-glossary_to_yaml(file, ...)
+export_glossary(file, ...)
 }
 \arguments{
-\item{file}{PARAM_DESCRIPTION, Default: ''}
+\item{file}{character, path to file storing glossary terms. Default: ''}
 
-\item{...}{PARAM_DESCRIPTION}
+\item{...}{additional arguments passed to \link[yaml:read_yaml]{read_yaml}}
 }
 \value{
-OUTPUT_DESCRIPTION
+glossary
 }
 \description{
-FUNCTION_DESCRIPTION
+Utility functions reading/exporting the glossary
 }
 \details{
-DETAILS
+new_glossary returns a new glossary object that is separate from
+the internal glossary object.
 }
 \examples{
 \dontrun{
@@ -33,3 +34,8 @@ if(interactive()){
  }
 }
 }
+\seealso{
+Other io: 
+\code{\link{glossary_to_table}()}
+}
+\concept{io}

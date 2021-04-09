@@ -1,7 +1,7 @@
-#' @title FUNCTION_TITLE
-#' @description FUNCTION_DESCRIPTION
-#' @param term PARAM_DESCRIPTION
-#' @return OUTPUT_DESCRIPTION
+#' @title Inline Acronym Verbs
+#' @description Verbs to invoke inline outputs for acronyms
+#' @param term character, name of the term.
+#' @return character
 #' @details DETAILS
 #' @examples
 #' \dontrun{
@@ -10,6 +10,7 @@
 #'  }
 #' }
 #' @rdname acr_verbs
+#' @family inline
 #' @export
 
 acrshort <- function(term){

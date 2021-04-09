@@ -33,14 +33,14 @@ add_definition(
 ```{r}
 add_acronym(
   entry = 'aic',
-  label = 'AIC',
-  long = 'akaike information criterion'
+  name = 'AIC',
+  desc = 'akaike information criterion'
 )
 
 add_acronym(
   entry = 'bic',
-  label = 'BIC',
-  long = 'bayes information criterion'
+  name = 'BIC',
+  desc = 'bayes information criterion'
 )
 ```
 
