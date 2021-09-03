@@ -57,3 +57,44 @@ glossary_to_table <- function(entries = get_entries()){
   row.names(ret) <- NULL
   ret
 }
+
+#' @export
+#' @importFrom htmltools tagList tags
+#' @rdname glossary_to_table
+#' @family io
+glossary_to_flextable <- function(entries = get_entries()){
+  ret <- lapply(entries,table_prep)
+  htmltools::tagList(
+    htmltools::tags$style(
+      '  dl {
+    display: flex;
+    flex-flow: row wrap;
+    border: solid #333;
+    border-width: 1px 1px 0 0;
+  }
+  dt {
+    flex-basis: 20%;
+    padding: 2px 4px;
+    background: #333;
+    text-align: right;
+    color: #fff;
+  }
+  dd {
+    flex-basis: 70%;
+    flex-grow: 1;
+    margin: 0;
+    padding: 2px 4px;
+    border-bottom: 1px solid #333;
+  }'
+    ),
+    htmltools::tags$dl(
+      lapply(ret,function(x){
+        htmltools::tagList(
+          htmltools::tags$dt(x$name),
+          htmltools::tags$dd(x$description)
+        )
+        }
+        )
+      )
+    )
+}

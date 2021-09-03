@@ -1,0 +1,18 @@
+---
+title: "Glossary Example"
+author: "Jonathan Sidi"
+date: "`r Sys.Date()`"
+output: 
+  pdf_document:
+    keep_tex: true
+    includes:
+      in_header: 
+        - \usepackage{glossaries}
+        - \makeglossaries
+        - \loadglsentries[main]{INP-00-glossary}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+

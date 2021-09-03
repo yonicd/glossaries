@@ -2,9 +2,12 @@
 % Please edit documentation in R/glossary_utils.R
 \name{glossary_to_table}
 \alias{glossary_to_table}
+\alias{glossary_to_flextable}
 \title{Export glossary to  table format}
 \usage{
 glossary_to_table(entries = get_entries())
+
+glossary_to_flextable(entries = get_entries())
 }
 \arguments{
 \item{entries}{character, entries to export, Default: get_entries()}
@@ -23,6 +26,9 @@ if(interactive()){
 }
 }
 \seealso{
+Other io: 
+\code{\link{load_entries}()}
+
 Other io: 
 \code{\link{load_entries}()}
 }

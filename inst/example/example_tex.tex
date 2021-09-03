@@ -1,0 +1,234 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+  \usepackage{amssymb}
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Glossary Example},
+  pdfauthor={Jonathan Sidi},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Glossary Example}
+\author{Jonathan Sidi}
+\date{2021-04-23}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(glossaries)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{add\_definition}\NormalTok{(}
+  \AttributeTok{entry =} \StringTok{\textquotesingle{}turtle\textquotesingle{}}\NormalTok{,}
+  \AttributeTok{name =} \StringTok{\textquotesingle{}turtle\textquotesingle{}}\NormalTok{,}
+  \AttributeTok{desc =} \StringTok{\textquotesingle{}a large marine reptile with a bony or leathery shell and flippers, coming ashore annually on sandy beaches to lay egg\textquotesingle{}}
+\NormalTok{  )}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{add\_acronym}\NormalTok{(}
+  \AttributeTok{entry =} \StringTok{\textquotesingle{}aic\textquotesingle{}}\NormalTok{,}
+  \AttributeTok{name =} \StringTok{\textquotesingle{}AIC\textquotesingle{}}\NormalTok{,}
+  \AttributeTok{desc =} \StringTok{\textquotesingle{}akaike information criterion\textquotesingle{}}
+\NormalTok{)}
+
+\FunctionTok{add\_acronym}\NormalTok{(}
+  \AttributeTok{entry =} \StringTok{\textquotesingle{}bic\textquotesingle{}}\NormalTok{,}
+  \AttributeTok{name =} \StringTok{\textquotesingle{}BIC\textquotesingle{}}\NormalTok{,}
+  \AttributeTok{desc =} \StringTok{\textquotesingle{}bayes information criterion\textquotesingle{}}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{definitions}{%
+\subsection{Definitions}\label{definitions}}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\begin{minipage}[b]{(\columnwidth - 1\tabcolsep) * \real{0.06}}\raggedright
+Term\strut
+\end{minipage} &
+\begin{minipage}[b]{(\columnwidth - 1\tabcolsep) * \real{0.94}}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.06}}\raggedright
+ocean\strut
+\end{minipage} &
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.94}}\raggedright
+oceans are wet from a standpoint of water\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.06}}\raggedright
+turtle\strut
+\end{minipage} &
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.94}}\raggedright
+a large marine reptile with a bony or leathery shell and flippers,
+coming ashore annually on sandy beaches to lay egg\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{acronyms}{%
+\subsection{Acronyms}\label{acronyms}}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Term &\tabularnewline
+\midrule
+\endhead
+PO & Pacific Ocean\tabularnewline
+AIC & akaike information criterion\tabularnewline
+BIC & bayes information criterion\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{examples}{%
+\subsection{Examples}\label{examples}}
+
+\hypertarget{information-criteria}{%
+\subsubsection{Information Criteria}\label{information-criteria}}
+
+In statistics, the \Gls{bic} or Schwarz information criterion (also SIC,
+SBC, SBIC) is a criterion for model selection among a finite set of
+models; the model with the lowest bayes information criterion (BIC) is
+preferred. It is based, in part, on the likelihood function and it is
+closely related to the Akaike information criterion (AIC).
+
+When fitting models, it is possible to increase the likelihood by adding
+parameters, but doing so may result in overfitting. Both BIC and AIC
+attempt to resolve this problem by introducing a penalty term for the
+number of parameters in the model; the penalty term is larger in BIC
+than in AIC
+
+The BIC was developed by Gideon E. Schwarz and published in a 1978
+paper, where he gave a Bayesian argument for adopting it.
+
+\hypertarget{turtles}{%
+\subsubsection{Turtles}\label{turtles}}
+
+The Pacific Ocean (PO) is the largest and deepest of Earth's oceanic
+divisions. It extends from the Arctic Ocean in the north to the Southern
+Ocean (or, depending on definition, to Antarctica) in the south and is
+bounded by the continents of Asia and Australia in the west and the
+Americas in the east.
+
+Sea turtle live in the Nothern PO one or more life stages, from
+hatchling to adult. This includes green, loggerhead, olive ridley,
+leatherback, and hawksbill sea turtles---all of which are protected
+under the U.S. Endangered Species Act.
+
+\end{document}

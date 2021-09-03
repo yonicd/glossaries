@@ -16,7 +16,7 @@ library(glossaries)
 ```
 
 ```{r}
-add_entry(
+add_definition(
   entry = 'turtle',
   name = 'turtle',
   desc = 'a large marine reptile with a bony or leathery shell and flippers, coming ashore annually on sandy beaches to lay egg'
@@ -26,31 +26,27 @@ add_entry(
 ```{r}
 add_acronym(
   entry = 'aic',
-  label = 'AIC',
-  long = 'akaike information criterion'
+  name = 'AIC',
+  desc = 'akaike information criterion'
 )
 
 add_acronym(
   entry = 'bic',
-  label = 'BIC',
-  long = 'bayes information criterion'
+  name = 'BIC',
+  desc = 'bayes information criterion'
 )
 ```
 
 ## Definitions
 
 ```{r, echo=FALSE}
-get_entries('definition')%>%
-  glossary_to_table()%>%
-  knitr::kable(col.names = c('Term',''))
+knitr::load_cache('definitions', 'definition_tbl')
 ```
 
 ## Acronyms
 
 ```{r, echo=FALSE}
-get_entries('acronym')%>%
-  glossary_to_table()%>%
-  knitr::kable(col.names = c('Term',''))
+knitr::load_cache('acronyms', 'acronym_tbl')
 ```
 
 ## Examples
@@ -65,7 +61,14 @@ The `r gls('bic')` was developed by Gideon E. Schwarz and published in a 1978 pa
 
 ### `r Glspl('turtle')`
 
-The `r gls('po')` is the largest and deepest of Earth's oceanic divisions. It extends from the Arctic `r Gls('ocean')` in the north to the Southern `r Gls('ocean')` (or, depending on definition, to Antarctica) in the south and is bounded by the continents of Asia and Australia in the west and the Americas in the east.
+The po is the largest and deepest of Earth's oceanic divisions. It extends from the Arctic `r Gls('ocean')` in the north to the Southern `r Gls('ocean')` (or, depending on definition, to Antarctica) in the south and is bounded by the continents of Asia and Australia in the west and the Americas in the east.
 
-Sea `r gls('turtle')` live in the Nothern `r gls('po')` one or more life stages, from hatchling to adult. This includes green, loggerhead, olive ridley, leatherback, and hawksbill sea `r glspl('turtle')`—all of which are protected under the U.S. Endangered Species Act.
+Sea `r gls('turtle')` live in the Nothern po one or more life stages, from hatchling to adult. This includes green, loggerhead, olive ridley, leatherback, and hawksbill sea `r glspl('turtle')`—all of which are protected under the U.S. Endangered Species Act.
 
+```{r acronyms, echo=FALSE, cache=TRUE, cache.rebuild = TRUE}
+acronym_tbl <- glossary_to_flextable(used_entries('acronym'))
+```
+
+```{r definitions, echo=FALSE, cache=TRUE, cache.rebuild = TRUE}
+definition_tbl <- glossary_to_flextable(used_entries('definition'))
+```

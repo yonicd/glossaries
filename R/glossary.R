@@ -1,3 +1,9 @@
+#' @importFrom R6 R6Class
+#' @importFrom knitr opts_knit
+#' @importFrom yaml read_yaml
+#' @importFrom stats setNames
+#' @importFrom textclean make_plural
+#' @importFrom glue glue
 glossary <- R6::R6Class(
   classname = "Glossary",
   public = list(
@@ -46,15 +52,7 @@ glossary <- R6::R6Class(
       private$counter[[entry]] <- FALSE
     },
     get_entry     = function(entry){
-      ret <- private$entries[[entry]]
-      if(self$output =='latex'){
-        glue::glue('\\newglossaryentry{{{entry}}}{{',
-                   '   name       ={ret$name},',
-                   '   description={ret$description}',
-                   '}}',.sep      = '\n')
-      }else{
-        ret
-      }
+      private$entries[[entry]]
     },
     rm_entry      = function(entry){
       private$entries[[entry]] <- NULL
@@ -76,73 +74,46 @@ glossary <- R6::R6Class(
       )
     },
     gls           = function(term){
+      private$is_entry(term)
       on.exit(self$bump(term))
-      if(self$output =='latex'){
-        glue::glue('\\gls{{{term}}}')
-      }else{
         if(self$get_count(term)){
           private$entries[[term]]$name
         }else{
           private$entries[[term]]$first
         }
-      }
     },
-    glspl         = function(term){
+    glspl = function(term){
       on.exit(self$bump(term))
-      if(self$output            =='latex'){
-        glue::glue('\\glspls{{{term}}}')
-      }else{
         if(self$get_count(term)){
           private$entries[[term]]$plural
         }else{
           private$entries[[term]]$first_plural
         }
-      }
     },
-    Gls           = function(term){
+    Gls = function(term){
       on.exit(self$bump(term))
-      if(self$output            =='latex'){
-        glue::glue('\\Gls{{{term}}}')
-      }else{
         if(self$get_count(term)){
           private$firstup(private$entries[[term]]$name)
         }else{
           private$firstup(private$entries[[term]]$first)
         }
-      }
     },
-    Glspl         = function(term){
+    Glspl = function(term){
       on.exit(self$bump(term))
-      if(self$output =='latex'){
-        glue::glue('\\Gls{{{term}}}')
-      }else{
         if(self$get_count(term)){
           private$firstup(private$entries[[term]]$plural)
         }else{
           private$firstup(private$entries[[term]]$first_plural)
         }
-      }
     },
     acrshort      = function(term){
-      if(self$output            =='latex'){
-        glue::glue('\\acrshort{{{term}}}')
-      }else{
         private$entries[[term]]$name
-      }
     },
-    acrlong       = function(term){
-      if(self$output            =='latex'){
-        glue::glue('\\acrlong{{{term}}}')
-      }else{
+    acrlong = function(term){
         private$entries[[term]]$description
-      }
     },
-    acrfull       = function(term){
-      if(self$output            =='latex'){
-        glue::glue('\\acrfull{{{term}}}')
-      }else{
+    acrfull = function(term){
         private$entries[[term]]$first
-      }
     },
     list_entries  = function(){
       private$entries
@@ -192,6 +163,12 @@ glossary <- R6::R6Class(
       substr(x, 1, 1) <- toupper(substr(x, 1, 1))
       x
     },
-    counter = list()
+    counter = list(),
+    is_entry  = function(term){
+      if(!term%in%names(private$entries)){
+        msg <- glue::glue('{term} is not in entries.\nRun entry_names() to view loaded entries')
+        stop(msg, call. = FALSE)
+      }
+    }
   )
   )

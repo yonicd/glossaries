@@ -47,16 +47,16 @@ add_acronym(
 ## Definitions
 
 ```{r, echo=FALSE}
-get_entries('definition')%>%
-  glossary_to_table()%>%
+get_entries('definition') |>
+  glossary_to_table() |>
   knitr::kable(col.names = c('Term',''))
 ```
 
 ## Acronyms
 
 ```{r, echo=FALSE}
-get_entries('acronym')%>%
-  glossary_to_table()%>%
+get_entries('acronym') |>
+  glossary_to_table() |>
   knitr::kable(col.names = c('Term',''))
 ```
 

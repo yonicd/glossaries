@@ -83,3 +83,16 @@ entry_names <- function(){
   names(entries_frame) <- c('type','name')
   entries_frame
 }
+
+#' @title Query Used Terms in Document
+#' @description Query used glossary entries
+#' @param type character, term type 'definition' or 'acronym'
+#' @return
+#' returns a list of entries by type used in the document
+#' @export
+used_entries <- function(type = c("definition", "acronym")){
+  entries <- get_entries(type)
+  objs <- sapply(entries,'[[',1)
+  flags <- sapply(names(objs),g$get_count,simplify = TRUE)
+  entries[flags]
+}
